@@ -1,12 +1,6 @@
 // jshint esversion: 7
 
-//without using jQuery
-window.addEventListener("load", function() {
-  //select the button and register the handler
-  document.querySelector("button").addEventListener("click", controller);
-});
-
-let controller = function() {
+$("#b1").click(function controller() {
   let prefixURL =
     "https://api.flickr.com/services/feeds/photos_public.gne?tags=";
   let suffixURL = "&format=json&jsoncallback=?";
@@ -40,6 +34,6 @@ let controller = function() {
       }
     });
   });
-};
+});
 
 $(document).ready(controller);
